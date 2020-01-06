@@ -9,12 +9,14 @@ import {
   ReactiveFormsModule
 } from '@angular/forms';
 import { SimpleFormComponent } from './page/simple-form/simple-form.component';
+import { GroupFormComponent } from './page/group-form/group-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SimpleFormComponent
+    SimpleFormComponent,
+    GroupFormComponent
   ],
   imports: [
     BrowserModule,

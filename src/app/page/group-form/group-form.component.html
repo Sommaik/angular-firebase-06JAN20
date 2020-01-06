@@ -1,0 +1,8 @@
+<form [formGroup]="inputForm" (submit)="onFormSubmit()">
+  <input formControlName="first" />
+  <input formControlName="last" />
+  <button type="submit">Save</button>
+</form>
+
+{{ inputForm.value | json }}
+{{ inputForm.valid }}

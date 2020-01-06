@@ -1,1 +1,10 @@
-<p>simple-form works!</p>
+<form #spForm="ngForm" (submit)="onFormSubmit(spForm)">
+  <input name="first" ngModel required minlength="5" #first="ngModel" />
+  <input name="last" ngModel required #last="ngModel"/>
+  <button type="submit">Save</button>
+</form>
+
+{{ spForm.value | json }}
+{{ spForm.valid }}
+{{ first.valid }}
+{{ last.valid }}
