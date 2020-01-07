@@ -1,0 +1,21 @@
+<button class="btn btn-link" (click)="onAddClick()">new user</button>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let d of data | async">
+      <td>{{ d.email }}</td>
+      <td>{{ d.password }}</td>
+      <td>
+        <button
+          class="btn btn-danger"
+          (click)="onDeleteClick(d._id)">delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

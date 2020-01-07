@@ -15,6 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HighlightDirective } from './shared/highlight.directive';
 import { TrimCreditPipe } from './shared/trim-credit.pipe';
 import { HttpClientModule } from '@angular/common/http';
+import { UserComponent } from './page/user/user.component';
+import { UserFormComponent } from './page/user-form/user-form.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { HttpClientModule } from '@angular/common/http';
     GroupFormComponent,
     ListDataComponent,
     HighlightDirective,
-    TrimCreditPipe
+    TrimCreditPipe,
+    UserComponent,
+    UserFormComponent
   ],
   imports: [
     BrowserModule,
