@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -13,6 +13,8 @@ export class GroupFormComponent implements OnInit {
     last: ['', [Validators.required] ]
   });
 
+  @Output() save: EventEmitter<string> = new EventEmitter();
+
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
@@ -21,6 +23,7 @@ export class GroupFormComponent implements OnInit {
   onFormSubmit() {
     if (this.inputForm.valid) {
       console.log('send data to server');
+      this.save.emit(this.inputForm.get('first').value);
     } else {
       alert('invalid form');
     }

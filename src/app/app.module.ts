@@ -10,19 +10,25 @@ import {
 } from '@angular/forms';
 import { SimpleFormComponent } from './page/simple-form/simple-form.component';
 import { GroupFormComponent } from './page/group-form/group-form.component';
+import { ListDataComponent } from './page/list-data/list-data.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HighlightDirective } from './shared/highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SimpleFormComponent,
-    GroupFormComponent
+    GroupFormComponent,
+    ListDataComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
