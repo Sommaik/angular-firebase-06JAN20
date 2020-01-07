@@ -5,3 +5,12 @@
 <button (click)="onButtonClick()">show url</button>
 <input type="text" [(ngModel)]="url" />
 {{ url }}
+{{ price | number:'1.2-3' }}
+{{ currentDate | date:'dd / MMM / y hh:mm:ss ' | uppercase }}
+
+<input [(ngModel)]="creditCard" />
+<h1>{{ creditCard | trimCredit:'#' }}</h1>
+<h1>{{ creditCard | trimCredit:'X' | lowercase }}</h1>
+<h1>{{ creditCard | trimCredit:'$' }}</h1>
+<!-- 1234567890123456 -->
+<!-- 123XXXXXXXXXX456 -->
