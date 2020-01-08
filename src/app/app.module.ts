@@ -8,8 +8,6 @@ import {
   FormsModule,
   ReactiveFormsModule
 } from '@angular/forms';
-import { SimpleFormComponent } from './page/simple-form/simple-form.component';
-import { GroupFormComponent } from './page/group-form/group-form.component';
 import { ListDataComponent } from './page/list-data/list-data.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HighlightDirective } from './shared/highlight.directive';
@@ -17,18 +15,23 @@ import { TrimCreditPipe } from './shared/trim-credit.pipe';
 import { HttpClientModule } from '@angular/common/http';
 import { UserComponent } from './page/user/user.component';
 import { UserFormComponent } from './page/user-form/user-form.component';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { RegisterComponent } from './page/register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SimpleFormComponent,
-    GroupFormComponent,
     ListDataComponent,
     HighlightDirective,
     TrimCreditPipe,
     UserComponent,
-    UserFormComponent
+    UserFormComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,11 @@ import { UserFormComponent } from './page/user-form/user-form.component';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

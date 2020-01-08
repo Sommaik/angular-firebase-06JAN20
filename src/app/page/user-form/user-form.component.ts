@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from 'src/app/shared/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-form',
@@ -16,7 +17,8 @@ export class UserFormComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private userService: UserService
+    private userService: UserService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -26,7 +28,7 @@ export class UserFormComponent implements OnInit {
     if (this.userForm.valid) {
       this.userService
         .addUser(this.userForm.value)
-        .subscribe(resp => console.log(resp));
+        .subscribe(resp => this.router.navigate(['user']));
     } else {
       alert('invalid form');
     }
