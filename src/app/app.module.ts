@@ -21,6 +21,11 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { RegisterComponent } from './page/register/register.component';
+import { LoginComponent } from './page/login/login.component';
+import { SigninWithPhoneComponent } from './page/signin-with-phone/signin-with-phone.component';
+import { MenuComponent } from './page/menu/menu.component';
+import { ProductComponent } from './page/product/product.component';
+import { ProductFormComponent } from './page/product-form/product-form.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +36,12 @@ import { RegisterComponent } from './page/register/register.component';
     TrimCreditPipe,
     UserComponent,
     UserFormComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent,
+    SigninWithPhoneComponent,
+    MenuComponent,
+    ProductComponent,
+    ProductFormComponent
   ],
   imports: [
     BrowserModule,

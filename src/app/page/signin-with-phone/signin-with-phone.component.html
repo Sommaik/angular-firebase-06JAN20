@@ -1,0 +1,31 @@
+<form
+  class="col-sm-12 col-lg-6"
+  [formGroup]="phoneForm" (submit)="onPhoneFormSubmit()">
+  <div class="form-group ">
+    <label for="phoneNumber">Phone Number</label>
+    <input
+      type="text"
+      class="form-control"
+      id="phoneNumber"
+      formControlName="phoneNo"
+      >
+  </div>
+  <button type="submit" class="btn btn-primary">Request OTP</button>
+</form>
+
+<div id="recapt-div"></div>
+
+<form
+  class="col-sm-12 col-lg-6"
+  [formGroup]="otpForm" (submit)="onOtpFormSubmit()">
+  <div class="form-group ">
+    <label for="code">Otp Code</label>
+    <input
+      type="text"
+      class="form-control"
+      id="code"
+      formControlName="code"
+      >
+  </div>
+  <button type="submit" class="btn btn-primary">Confirm OTP</button>
+</form>

@@ -1,0 +1,15 @@
+<div class="container">
+  <ul class="list-group">
+    <li class="list-group-item"
+      [routerLink]="['','admin', 'user']">User</li>
+    <li class="list-group-item"
+      [routerLink]="['', 'admin', 'simple', 'simple-form']">Simple Form</li>
+    <li class="list-group-item"
+      [routerLink]="['', 'admin', 'simple', 'group-form']">Group Form</li>
+    <li class="list-group-item"
+      [routerLink]="['', 'admin', 'list-data']">List Data</li>
+    <li class="list-group-item"
+      [routerLink]="['', 'admin', 'product']">Product</li>
+    <li class="list-group-item" (click)="onSignOut()">Sign Out</li>
+  </ul>
+</div>

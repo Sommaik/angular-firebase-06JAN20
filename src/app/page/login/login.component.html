@@ -1,0 +1,36 @@
+<form
+  class="col-sm-12 col-lg-6"
+  [formGroup]="userForm" (submit)="onFormSubmit()">
+  <div class="form-group ">
+    <label for="exampleInputEmail1">Email address</label>
+    <input
+      type="email"
+      class="form-control"
+      id="exampleInputEmail1"
+      formControlName="email"
+      >
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      id="exampleInputPassword1"
+      formControlName="password"
+      >
+  </div>
+  <button type="submit" class="btn btn-primary">Login</button>
+</form>
+<div class="col-sm-12 col-lg-6" style="padding-top: 15px;">
+  <button
+  type="button"
+  class="btn btn-danger"
+  (click)="onGoogleClick()">Connect with Google</button>
+</div>
+<div class="col-sm-12 col-lg-6" style="padding-top: 15px;">
+  <button
+  type="button"
+  class="btn btn-primary"
+  (click)="onFacebookClick()">Connect with Facebook</button>
+</div>
+
