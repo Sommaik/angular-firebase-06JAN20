@@ -1,1 +1,41 @@
-<p>product works!</p>
+<div class="container">
+  <button
+    class="btn btn-link"
+    (click)="onAddButtonClick()">
+    <i class="fa fa-plus-circle"></i>
+    Create new product</button>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>ID</th>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Active</th>
+        <th>Price</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let d of data | async; let index = index;">
+        <td>{{ index + 1 }}</td>
+        <td><button
+          class="btn btn-info"
+          (click)="onEditButtonClick(d.id)"
+          >Edit</button>
+        </td>
+        <td>{{ d.code }}</td>
+        <td>{{ d.name }}</td>
+        <td>{{ d.active }}</td>
+        <td>{{ d.price | number }}</td>
+        <td>
+          <button
+            class="btn btn-danger"
+            (click)="onDeleteButtonClick(d.id)"
+            >Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
